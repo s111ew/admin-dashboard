@@ -15,9 +15,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     --accent-colour: #c74606;
-    --background-colour: #ebe8e4;
+    --background-colour: #f7fafc;
     --text-colour: #42413f;
     --sidebar-colour: #fff;
+    --border-colour: #d9d9d9;
+    --search-text-colour: #757575;
 }
 
 .sidebar-container {
@@ -29,7 +31,7 @@ h1 {
     font-family: 'Coolvetica', Helvetica, sans-serif;
     color: var(--accent-colour);
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
     margin-bottom: 75px;
 }
 
@@ -46,14 +48,31 @@ h1 {
     align-items: start;
 }
 
+.link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.link:not(.link:nth-child(1)):hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.link > img {
+    width: 22px;
+    height: auto;
+}
+
 .link:nth-child(1) {
     box-sizing: border-box;
     background-color: var(--accent-colour);
     color: var(--sidebar-colour);
-    padding: 15px 140px 15px 20px;
+    padding: 15px 120px 15px 20px;
     margin: 0px 0px -15px -20px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.25);
 }
 
 .link:nth-child(5) {
@@ -65,9 +84,109 @@ h1 {
     padding: 25px;
 }
 
+.header {
+    display: flex;
+    gap: 25px;
+    height: 52px;
+    padding: 0px 50px;
+    margin-bottom: 35px;
+}
+
+input {
+    border-radius: 30px;
+    border: 1px solid var(--border-colour);
+    flex: 1;
+    background-image: url(./icons/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
+    padding-left: 50px;
+    color: var(--search-text-colour);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--sidebar-colour);
+    border: 1px solid var(--border-colour);
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 5px 15px 5px 5px;
+    color: var(--text-colour);
+    font-size: 13px;
+}
+
+.profile-picture {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.card-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr) repeat(2, 0.5fr) 1fr;
+    grid-template-areas: 
+        "one two three three four"
+        "five five five six six"
+        "seven seven seven six six";
+}
+
 .card {
     background-color: var(--sidebar-colour);
     border-radius: 15px;
-    padding: 15px;
+    padding: 25px;
+    color: var(--text-colour);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.05);
+}
+
+.card-title > img {
+    width: 20px;   
+    height: auto;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.card-value {
+    text-align: center;
+    font-size: 35px;
+    margin: 45px 0px;
+}
+
+.card-subtitle {
+    font-size: 12px;
+    text-align: center;
+}
+
+.card:nth-child(1) {
+    grid-area: one;
+}
+
+.card:nth-child(2) {
+    grid-area: two;
+}
+
+.card:nth-child(3) {
+    grid-area: three;
+}
+
+.card:nth-child(4) {
+    grid-area: four;
+}
+
+.card:nth-child(5) {
+    grid-area: five;
+}
+
+.card:nth-child(6) {
+    grid-area: six;
+}
+
+.card:nth-child(7) {
+    grid-area: seven;
 }
 
