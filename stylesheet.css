@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(./fonts/coolvetica.rg-regular.otf);
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(./fonts/Ubuntu-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    --accent-colour: #c74606;
+    --background-colour: #ebe8e4;
+    --text-colour: #42413f;
+    --sidebar-colour: #fff;
+}
+
+.sidebar-container {
+    background-color: var(--sidebar-colour);
+    color: var(--text-colour);
+}
+
+h1 {
+    font-family: 'Coolvetica', Helvetica, sans-serif;
+    color: var(--accent-colour);
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 75px;
+}
+
+#trademark {
+    font-size: 14px;
+}
+
+.links-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 65px;
+    gap: 45px;
+    align-items: start;
+}
+
+.link:nth-child(1) {
+    box-sizing: border-box;
+    background-color: var(--accent-colour);
+    color: var(--sidebar-colour);
+    padding: 15px 140px 15px 20px;
+    margin: 0px 0px -15px -20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.link:nth-child(5) {
+    margin-bottom: 65px;
+}
+
+.main {
+    background-color: var(--background-colour);
+    padding: 25px;
+}
+
+.card {
+    background-color: var(--sidebar-colour);
+    border-radius: 15px;
+    padding: 15px;
+}
+
